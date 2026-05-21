@@ -1,0 +1,101 @@
+:root {
+	--text-color: black;
+	--bg: "white";
+	--bg-border: black;
+}
+
+.student {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: max-content;
+	padding: 2em 5em;
+	margin: 2rem auto;
+
+	border: solid black 0.15rem;
+	border-radius: 2rem;
+
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+	transition: box-shadow 0.2s ease-in-out;
+
+	&:hover {
+		box-shadow: 8px 8px 0;
+	}
+}
+
+.student__info {
+	img {
+		width: 175px;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border-radius: 999px;
+		border: 0.1rem solid black;
+		transition: scale 0.1s;
+		cursor: grab;
+
+		&:hover {
+			scale: 1.03;
+		}
+	}
+}
+
+.student__status,
+.student__like {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+
+	button {
+		all: unset;
+		cursor: pointer;
+		height: 1.4rem;
+		transition: translate 0.2s;
+		background-color: var(--bg);
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 0px 0.4rem;
+
+		&:hover {
+			user-select: none;
+			translate: 0% -10%;
+		}
+	}
+}
+
+.student__status {
+	button[data-status="Offline"] {
+		font-weight: bold;
+		color: red;
+	}
+
+	button[data-status="Online"] {
+		font-weight: bold;
+		color: rgb(7, 205, 7);
+	}
+}
+
+.student__hobbies {
+	width: 100%;
+	border-radius: 1rem;
+	border: solid black 0.1rem;
+
+    transition: box-shadow 0.2s ease-in-out;
+
+	&:hover {
+		box-shadow: 5px 5px 0;
+	}
+}
+
+.student__hobbies-title {
+	padding: 0.3rem 0.5rem;
+	background-color: rgb(133, 240, 133);
+	border-bottom: solid black 0.1rem;
+	border-radius: 1rem 1rem 0 0;
+}
+
+.modeToggle {
+    
+}
